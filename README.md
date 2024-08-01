@@ -25,26 +25,41 @@ This project is a simple CRUD API built with Node.js, Express.js, and TypeScript
 1. **Clone the repository:**
     ```
    git clone https://github.com/essienricch/tobams-book-management-api 
-   ```
+   
    cd tobams-book-management-api
+   ```
 
 2. **Install dependencies:**
+   ```
     npm install
+   ```
 
 3. **Create a .env file in the root directory and configure the environment variables:**
+   ```
     MONGODB_URL=your database url
     PORT=your local port
+   ```
 
 4. **Build the application (optional, if you need to compile TypeScript):**
+   ```
     npm run build
-
+   ```
 5. **Run the application:**
-    npm start or npm run dev
+   ```
+    npm run dev
+   ```
 
 6. **Run Test using Postman or Jest Test:**
-    Postman => Import the Postman collection using this url: [text](<../../../Desktop/Tobams Book Store API.postman_collection.json>)
-    Jest => npm test
 
+   
+   Create Requests using the API Endpoint on Postman
+   
+   
+   Using Jest Test Framework
+   
+   ```
+    npm test
+   ```
 
 ##  Description of the API endpoints and their expected inputs/outputs. ##
 
