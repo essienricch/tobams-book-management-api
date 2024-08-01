@@ -61,7 +61,11 @@ This project is a simple CRUD API built with Node.js, Express.js, and TypeScript
     npm test
    ```
 
-##  Description of the API endpoints and their expected inputs/outputs. ##
+##  Description of the API endpoints and their expected requests/response. ##
+
+##Base Url - localhost:{PORT}/tobams-store/api
+### Create a Book  
+- Endpoint: ##POST `/book
 
 
 
