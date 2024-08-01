@@ -1,0 +1,23 @@
+import dotenv from 'dotenv';
+import express from 'express';
+const connectDB = require('./src/config/db');
+const bookRoutes = require('./src/routes/bookRoute');
+
+dotenv.config();
+
+const app = express();
+const port = process.env.PORT;
+
+// Middleware
+app.use(express.json());
+app.use('/tobams-store/api/book', bookRoutes);
+
+// MongoDB Connection
+connectDB();
+
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
+
+
+module.exports = app;
