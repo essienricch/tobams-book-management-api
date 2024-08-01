@@ -4,10 +4,10 @@ const fileUpload = require('../middleware/uploadFile');
 
 const router = express.Router();
 
-router.post('/', createBook);
-router.delete('/:id', deleteBook);
-router.get('/', getAllBooks);
-router.get('/:id', getBookById);
-router.patch('/update/:id', fileUpload.single('coverImage'), updateBook);
+router.post('/book', createBook);
+router.delete('/book/:id', deleteBook);
+router.get('/book', getAllBooks);
+router.get('/book/:id', getBookById);
+router.patch('/book/update/:id', fileUpload.single('coverImage'), updateBook);
 
 module.exports = router;

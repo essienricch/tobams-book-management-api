@@ -10,7 +10,7 @@ const port = process.env.PORT;
 
 // Middleware
 app.use(express.json());
-app.use('/tobams-store/api/book', bookRoutes);
+app.use('/tobams-store/api', bookRoutes);
 
 // MongoDB Connection
 connectDB();
