@@ -22,8 +22,10 @@ This project is a simple CRUD API built with Node.js, Express.js, and TypeScript
 - Git as version control.
 
 ### Installation Steps
-1. **Clone the repository:**\n
-   git clone https://github.com/essienricch/tobams-book-management-api \n
+1. **Clone the repository:**
+    ```
+   git clone https://github.com/essienricch/tobams-book-management-api 
+   ```
    cd tobams-book-management-api
 
 2. **Install dependencies:**
