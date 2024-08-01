@@ -110,6 +110,7 @@ This API Update the details of the book with the specified ID based on the reque
 }
 ```
 ### Get all Books  
+This API Returns a structured response containing a list of all books in the collection
 - Endpoint: GET  ' /book '
   
  Response:
@@ -133,6 +134,7 @@ This API Update the details of the book with the specified ID based on the reque
 
 ```
 ### Get a Single Book By ID  
+This API returns the details of the book with the specified ID, Also handle the case where the book ID does not exist
 - Endpoint: GET ' /book/66abe3123c462a879946ad39 '
   Response:
 ```
@@ -146,6 +148,7 @@ This API Update the details of the book with the specified ID based on the reque
 }
 ```
 ### Delete a Single Book By ID  
+This API deletes the book with the specified ID, Also handle the case where the book ID does not exist
 - Endpoint: DELETE ' /book/66abe3123c462a879946ad39 '
   Response:
 ```
