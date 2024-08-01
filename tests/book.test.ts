@@ -3,8 +3,9 @@ const app = require('../app');
 import mongoose from 'mongoose';
 import path from 'path';
 import fs from 'fs';
-const dotenv = require("dotenv");
+import dotenv from 'dotenv';
 const Book = require('../src/models/book');
+const db = require('../src/config/db')
 
 dotenv.config();
 
@@ -12,7 +13,7 @@ describe('Book API', () => {
   let createdBookId: string;
 
   beforeAll(async () => {
-    await mongoose.connect('mongodb+srv://essienricch:villain@cluster1.maqrp6h.mongodb.net/tobamsbookstore?retryWrites=true&w=majority&appName=Cluster1');
+    await db;
   });
 
 
