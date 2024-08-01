@@ -158,6 +158,16 @@ This API deletes the book with the specified ID, Also handle the case where the 
   "message": "Book deleted successfully."
 }
 ```
+## How to Run the Application and Test the Endpoints ##  
+1. **Run the application locally:**
+   - Ensure Mongo DB is connected and running
+   - Run `npm run dev` to start the server on the configured port (default: 2024).
+
+2. **Test the Endpoints using Jest, Supertest unit test or Postman:**
+   - Run the test using `npm test`
+   - Manually create requests using the API endpoints provided above
+   - For file uploads, use the form-data option in postman 
+
   
 
 
