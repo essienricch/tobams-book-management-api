@@ -50,14 +50,16 @@ This project is a simple CRUD API built with Node.js, Express.js, and TypeScript
    ```
 
 6. **Run Test using Postman or Jest Test:**
-   ``
-   Create Requests using the API Endpoint
-   ``
-   ``
-   Using Jest Test Framework \r\
-   ``
-    Jest => npm test
-   ``
+
+   
+   Create Requests using the API Endpoint on Postman
+   
+   
+   Using Jest Test Framework
+   
+   ```
+    npm test
+   ```
 
 ##  Description of the API endpoints and their expected inputs/outputs. ##
 
