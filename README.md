@@ -88,6 +88,7 @@ This API creates a book, validates the input data & save to DB
 }
 ```
 ### Update a Book  
+This API Update the details of the book with the specified ID based on the request body
 - Endpoint: PATCH ' /book/update/66abe3123c462a879946ad39 '
   
   Request Body:
@@ -133,7 +134,7 @@ This API creates a book, validates the input data & save to DB
 ```
 ### Get a Single Book By ID  
 - Endpoint: GET ' /book/66abe3123c462a879946ad39 '
-   Response:
+  Response:
 ```
 {
   title: 'Fire & Ice',
@@ -146,7 +147,7 @@ This API creates a book, validates the input data & save to DB
 ```
 ### Delete a Single Book By ID  
 - Endpoint: DELETE ' /book/66abe3123c462a879946ad39 '
-   Response:
+  Response:
 ```
 {
   "message": "Book deleted successfully."
