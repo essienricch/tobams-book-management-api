@@ -65,7 +65,8 @@ This project is a simple CRUD API built with Node.js, Express.js, and TypeScript
 
 Base URL - localhost:{PORT}/tobams-store/api
 ### Create a Book  
-- Endpoint: POST `/book
+This API creates a book, validates the input data & save to DB
+- Endpoint: POST ' /book '
   
   Request Body:
 ```
@@ -87,7 +88,7 @@ Base URL - localhost:{PORT}/tobams-store/api
 }
 ```
 ### Update a Book  
-- Endpoint: PATCH `/book/update/{:id}
+- Endpoint: PATCH ' /book/update/66abe3123c462a879946ad39 '
   
   Request Body:
 ```
@@ -108,7 +109,7 @@ Base URL - localhost:{PORT}/tobams-store/api
 }
 ```
 ### Get all Books  
-- Endpoint: GET `/book
+- Endpoint: GET  ' /book '
   
  Response:
 ```
@@ -130,6 +131,28 @@ Base URL - localhost:{PORT}/tobams-store/api
 ]
 
 ```
+### Get a Single Book By ID  
+- Endpoint: GET ' /book/66abe3123c462a879946ad39 '
+   Response:
+```
+{
+  title: 'Fire & Ice',
+  author: 'Martins Gerard',
+  publishedDate: 2024-05-10T00:00:00.000Z,
+  isbn: '12345',
+  coverImage: 'Dragon Stone',
+  _id: new ObjectId('66abe3123c462a879946ad39')
+}
+```
+### Delete a Single Book By ID  
+- Endpoint: DELETE ' /book/66abe3123c462a879946ad39 '
+   Response:
+```
+{
+  "message": "Book deleted successfully."
+}
+```
+  
 
 
 
