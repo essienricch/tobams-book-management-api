@@ -66,6 +66,7 @@ This project is a simple CRUD API built with Node.js, Express.js, and TypeScript
 Base URL - localhost:{PORT}/tobams-store/api
 ### Create a Book  
 - Endpoint: POST `/book
+  
   Request Body:
 ```
 {
@@ -87,6 +88,7 @@ Base URL - localhost:{PORT}/tobams-store/api
 ```
 ### Update a Book  
 - Endpoint: PATCH `/book/update/{:id}
+  
   Request Body:
 ```
 {
@@ -104,6 +106,29 @@ Base URL - localhost:{PORT}/tobams-store/api
   coverImage: 'Dragon Stone',
   _id: new ObjectId('66abe3123c462a879946ad39')
 }
+```
+### Get all Books  
+- Endpoint: GET `/book
+  
+ Response:
+```
+[
+{
+  title: 'Fire & Ice',
+  author: 'Martins Gerard',
+  publishedDate: 2023-05-10T00:00:00.000Z,
+  isbn: '12345',
+  _id: new ObjectId('66abe3123c462a879946ad39')
+}
+{
+  title: 'Tales By Moonlight',
+  author: 'Jaja IV Opobo',
+  publishedDate: 1990-11-05T00:00:00.000Z,
+  isbn: '15342',
+  _id: new ObjectId('866cbe3123c462a879946ad42')
+}
+]
+
 ```
 
 
