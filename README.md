@@ -63,25 +63,45 @@ This project is a simple CRUD API built with Node.js, Express.js, and TypeScript
 
 ##  Description of the API endpoints and their expected requests/response. ##
 
-##Base URL - localhost:{PORT}/tobams-store/api
+Base URL - localhost:{PORT}/tobams-store/api
 ### Create a Book  
-- Endpoint: ###POST `/book
-- Request Body:
+- Endpoint: POST `/book
+  Request Body:
 ```
 {
-	"title": "Fire & Ice",
+    "title": "Fire & Ice",
     "author": "Martins Gerard",
     "publishedDate": "2023-05-10",
     "isbn": "12345"
 }
 ```
-- Response:
+ Response:
 ```
 {
   title: 'Fire & Ice',
   author: 'Martins Gerard',
   publishedDate: 2023-05-10T00:00:00.000Z,
   isbn: '12345',
+  _id: new ObjectId('66abe3123c462a879946ad39')
+}
+```
+### Update a Book  
+- Endpoint: PATCH `/book/update/{:id}
+  Request Body:
+```
+{
+    "publishedDate": "2024-05-10",
+    "coverImage": "Dragon Stone"
+}
+```
+ Response:
+```
+{
+  title: 'Fire & Ice',
+  author: 'Martins Gerard',
+  publishedDate: 2024-05-10T00:00:00.000Z,
+  isbn: '12345',
+  coverImage: 'Dragon Stone',
   _id: new ObjectId('66abe3123c462a879946ad39')
 }
 ```
