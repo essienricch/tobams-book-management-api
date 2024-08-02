@@ -88,7 +88,7 @@ This API creates a book, validates the input data & save to DB
 }
 ```
 ### Update a Book  
-This API Update the details of the book with the specified ID based on the request body(which could contain the request file for cover-image update).i.e. this service also serves the cover-image update function.(Using Postman, you can make use of the form-data for the update)
+This API Update the details of the book with the specified ID based on the request body (which could contain the request file for cover-image update) .i.e. this service also serves the cover-image update function.(Using Postman, you can make use of the form-data for the update)
 - Endpoint: PATCH ' /book/update/66abe3123c462a879946ad39 '
   
   Request Body:
