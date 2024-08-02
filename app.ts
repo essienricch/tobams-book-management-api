@@ -6,7 +6,7 @@ const bookRoutes = require('./src/routes/bookRoute');
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 2024;
 
 // Middleware
 app.use(express.json());
