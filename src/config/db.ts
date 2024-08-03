@@ -9,7 +9,6 @@ if (!url) {
   
 const connectDB = async () => {
   try {
-    console.log(url);
     await mongoose.connect(url, {connectTimeoutMS: 30000});
     console.log("MongoDB successfully connected");
   } catch (error) {

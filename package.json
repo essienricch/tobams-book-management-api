@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest --detectOpenHandles --forceExit",
     "start-db": "node src/config/db.ts",
-    "start": "node app.ts",
-    "dev": "nodemon app.ts"
+    "start": "node server.ts",
+    "dev": "nodemon server.ts"
   },
   "jest": {
     "verbose": true,

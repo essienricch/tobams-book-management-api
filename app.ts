@@ -12,8 +12,8 @@ const app = express();
 app.use(express.json());
 app.use('/tobams-store/api', bookRoutes);
 
-// MongoDB Connection
-// connectDB();
+//MongoDB Connection
+connectDB();
 
 // app.listen(port, () => {
 //     console.log(`Server running on port ${port}`);
