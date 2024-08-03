@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import Book from '../models/book';
+const Book = require('../models/book');
 const Utils = require('../utils');
 
 
@@ -45,7 +45,7 @@ const updateBook = async (req: Request, res: Response) => {
 //GET ALL BOOKS ==>
 const getAllBooks = async (req: Request, res: Response) => {
     try {
-      const books = await Book.find();
+      const books = await Book.find({});
       console.log({Books: books})
       res.status(200).json({Books: books});
     } catch (error) {

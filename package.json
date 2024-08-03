@@ -4,17 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --detectOpenHandles --forceExit",
     "start-db": "node src/config/db.ts",
     "start": "node app.ts",
     "dev": "nodemon app.ts"
   },
   "jest": {
+    "verbose": true,
     "preset": "ts-jest",
     "testEnvironment": "node",
     "testMatch": [
       "**/tests/**/*.test.ts"
-    ]
+    ],
+    "setupFilesAfterEnv": ["C:/Users/New Owner/nodeProjects/type-script/tobams-book-store-api/jest.setup.ts"],
+    "moduleFileExtensions": ["js", "ts"],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    }
   },
   "keywords": [],
   "author": "",

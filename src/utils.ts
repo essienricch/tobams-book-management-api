@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { isValidObjectId } from 'mongoose';
-import Book from '../src/models/book';
+const Book = require('../src/models/book');
 
 interface IValidationErrors {
   [key: string]: string;
@@ -9,18 +9,17 @@ interface IValidationErrors {
 const validateInput = (requiredFields: string[]) => async (req: Request, res: Response, next: NextFunction) => {
   const errors: IValidationErrors = {};
 
-  // Check for required fields
-  requiredFields.forEach(field => {
+    requiredFields.forEach(field => {
     if (!req.body[field]) {
       errors[field] = `The ${field} field is required`;
     }
   });
 
-  // Check for unique constraints (replace with your actual logic)
+  
   if (Object.keys(errors).length === 0) {
-    // Assuming you have a model and a unique field
-    const book = req.body.constructor; // Get the model from the request body
-    const uniqueField = 'isbn'; // Replace with your actual unique field
+    
+    const book = req.body.constructor; 
+    const uniqueField = 'isbn'; 
 
     if (req.body[uniqueField]) {
       const existingRecord = await Book.findOne({ [uniqueField]: req.body[uniqueField] });
