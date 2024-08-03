@@ -16,7 +16,7 @@ This project is a simple CRUD API built with Node.js, Express.js, and TypeScript
 
 ### Prerequisites
 - Node.js (v14 or higher)
-- MongoDB (local instance or cloud service like MongoDB Atlas)
+- MongoDB (local instance or cloud service like MongoDB Atlas: https://cloud.mongodb.com/user/register)
 - Typescript
 - Multer Dependencies 
 - Git as version control.
