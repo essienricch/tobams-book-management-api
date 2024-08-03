@@ -5,7 +5,7 @@ This project is a simple CRUD API built with Node.js, Express.js, and TypeScript
 
 ## Features
 - Create, Read, Update, Delete (CRUD) operations for book management.
-- File upload middleware for handling book cover images.
+- File upload middleware for handling book cover images (Be Informed: The uploaded image must not exceed 2MB).
 - Comprehensive error handling and input validation.
 - Built using TypeScript for type safety.
 - MongoDB for data storage.

@@ -35,6 +35,7 @@ const updateBook = async (req: Request, res: Response) => {
         return res.status(404).json({ message: 'Book not found' });
       }
       await book.save();
+      console.log({Updated_Book: book});
       res.status(200).json(book);
     } catch (error) {
       Utils.handleError(error, res);
