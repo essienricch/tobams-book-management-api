@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import Book from '../models/book';
-const exceptionErrorHandler = require('../utils');
+const Utils = require('../utils');
 
 
 //CREATE A BOOK ==>
@@ -12,7 +12,7 @@ const createBook = async (req: Request, res: Response) => {
     await book.save();
     res.status(201).json(book);
   } catch (error) {
-    exceptionErrorHandler(error, res);
+    Utils.handleError(error, res);
   }
 };
 
@@ -20,13 +20,14 @@ const createBook = async (req: Request, res: Response) => {
 const updateBook = async (req: Request, res: Response) => {
     let imageLimit= 2097152;
     try {
+        const image = req.file?.filename
         const updatedBookData: any = {...req.body}
         if(req.file){
             if(req.file.size > imageLimit){
                 console.log("file size limit exceeded")
                 return res.status(413).json({ message: 'File size exceeds limit (2MB)' });
             }
-            updatedBookData.coverImage = req.file.filename;
+            updatedBookData.coverImage = image;
         }
       const book = await Book.findByIdAndUpdate(req.params.id, updatedBookData,{new: true});
       if (!book) {
@@ -36,7 +37,7 @@ const updateBook = async (req: Request, res: Response) => {
       await book.save();
       res.status(200).json(book);
     } catch (error) {
-      exceptionErrorHandler(error, res);
+      Utils.handleError(error, res);
     }
 };
 
@@ -44,9 +45,10 @@ const updateBook = async (req: Request, res: Response) => {
 const getAllBooks = async (req: Request, res: Response) => {
     try {
       const books = await Book.find();
-      res.status(200).json(books);
+      console.log({Books: books})
+      res.status(200).json({Books: books});
     } catch (error) {
-      exceptionErrorHandler(error, res);
+      Utils.handleError(error, res);
     }
 };
 
@@ -59,7 +61,7 @@ const getBookById = async (req: Request, res: Response) => {
       }
       res.status(200).json(book);
     } catch (error) {
-      exceptionErrorHandler(error,res);
+      Utils.handleError(error, res);
     }
 };
 
@@ -72,7 +74,7 @@ const deleteBook = async (req: Request, res: Response) => {
       }
       res.status(200).json({ message: 'Book deleted successfully' });
     } catch (error) {
-      exceptionErrorHandler(error,res)
+      Utils.handleError(error, res);
     }
 };
 

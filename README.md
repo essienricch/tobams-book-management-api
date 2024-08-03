@@ -115,7 +115,7 @@ This API Returns a structured response containing a list of all books in the col
   
  Response:
 ```
-[
+Books: [
 {
   title: 'Fire & Ice',
   author: 'Martins Gerard',
